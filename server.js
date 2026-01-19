@@ -1,6 +1,6 @@
 import express from "express";
 import fs from "fs";
-import { crawlVolumes } from "./src/crawler/volumeCrawler.js";
+import { crawlVolumenes } from "./src/crawler/crawlerVolumenes.js";
 
 const app = express();
 app.use(express.json());
@@ -16,7 +16,7 @@ app.post("/scrape", async (req, res) => {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  crawlVolumes(baseUrl, outputDir);
+  crawlVolumenes(baseUrl, outputDir);
 
   res.json({
     status: "Scraping iniciado",
