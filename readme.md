@@ -82,11 +82,13 @@ Body JSON:
 ```json
 {
   "baseUrl": "https://readcomicsonline.ru/comic/XXX",
-  "outputDir": "./output"
+  "outputDir": "./carpeta-de-comic"
 }
 ```
 
 Ejemplo con curl:
 ```bash
-curl -X POST http://localhost:3000/scrape   -H "Content-Type: application/json"   -d '{"baseUrl":"https://readcomicsonline.ru/comic/XXX"}'
+curl -X POST http://localhost:3000/scrape   -H "Content-Type: application/json"   -d '{"baseUrl":"https://readcomicsonline.ru/comic/XXX",
+  "outputDir": "./carpeta-de-comic"
+}'
 ```
